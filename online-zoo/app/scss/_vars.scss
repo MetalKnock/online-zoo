@@ -1,0 +1,16 @@
+$color-text-navigation: #fff;
+$color-text-navigation-hover: #d69376;
+$background-color: #000;
+$text-color: #fff;
+$highlight-color: #ffee2e;
+$color-gradiend: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+$btn-hover-color: #e47209;
+$btn-active-color: #4b9200;
+$btn-disabled-color: #767474;
+
+@mixin color-text-navigation-active {
+  background-color: #f9804b;
+  background-image: $color-gradiend;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

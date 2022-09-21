@@ -4,6 +4,156 @@
 @import "libs";
 @import "global";
 
-body {
-  display: flex;
+.header {
+  position: relative;
+  z-index: 10;
+  background-color: $background-color;
+  &__container {
+    min-height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 3.4rem;
+  }
+
+  &__menu {
+    margin-right: auto;
+  }
+
+  &__designed {
+  }
+}
+
+.logo {
+  padding: 0.2rem 0.36rem;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  position: relative;
+  &__title {
+    font-weight: 400;
+    font-size: 1.90145rem;
+    line-height: calc(23 / 19 * 100%);
+    color: $color-text-navigation;
+    text-align: center;
+    max-width: 7.249rem;
+  }
+  &__img {
+    position: absolute;
+    top: 2.3rem;
+    left: 0.9rem;
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: calc(22 / 16 * 100%);
+    color: $color-text-navigation;
+    display: block;
+    padding: 2.9rem;
+  }
+  &__link:active {
+    @include color-text-navigation-active;
+  }
+  &__link:hover {
+    color: $color-text-navigation-hover;
+  }
+  &__link--active {
+    @include color-text-navigation-active;
+  }
+}
+.designed {
+  &__link {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: calc(22 / 16 * 100%);
+    color: $color-text-navigation;
+    display: block;
+    padding: 2.9rem 0 2.9rem 2.9rem;
+  }
+  &__link:active {
+    @include color-text-navigation-active;
+  }
+  &__link:hover {
+    color: $color-text-navigation-hover;
+  }
+}
+
+.page {
+  &__hero {
+    margin-top: -8rem;
+  }
+}
+
+.hero {
+  background-image: url(../images/hero/Giant_Panda.jpg);
+  background-size: cover;
+  &__container {
+    padding: 16.6rem 1.5rem 10rem 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 10.6496rem;
+    line-height: calc(80 / 106.496 * 100%);
+    color: $text-color;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 6.1rem 0;
+    margin-left: auto;
+    span {
+      color: $highlight-color;
+    }
+  }
+  &__title::after {
+    content: "";
+    position: absolute;
+    left: -7.3rem;
+    top: -7.4rem;
+    width: 46.5rem;
+    height: 46.5rem;
+    border-radius: 50%;
+    z-index: -1;
+    background: $color-gradiend;
+  }
+
+  &__button {
+    margin-left: auto;
+    margin-right: 9.9rem;
+  }
+}
+.btn {
+  display: block;
+  background: $color-gradiend;
+  border: none;
+  border-radius: 2.5rem;
+  min-height: 5.4rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: calc(22 / 16 * 100%);
+  color: $text-color;
+  text-transform: uppercase;
+  padding: 1rem 9.5rem 1rem 9.9rem;
+}
+.btn:hover {
+  background: $btn-hover-color;
+}
+.btn:active {
+  background: $btn-active-color;
+}
+.btn:disabled {
+  background: $btn-disabled-color;
 }

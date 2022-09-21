@@ -5,18 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online zoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header"></header>
-    <main class="main"></main>
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo logo" href="index.html">
+          <h1 class="logo__title">PetStory online</h1>
+          <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="index.html">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Map</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Zoos</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Donate</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__designed designed">
+          <a class="designed__link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
+            ©</a>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__hero hero">
+        <div class="hero__container container">
+          <h1 class="hero__title">Watch your <span>favorite</span> animal online</h1>
+          <button class="hero__button btn">wath online</button>
+        </div>
+      </section>
+    </main>
     <footer class="footer"></footer>
   </div>
-
-
-
   <script src="js/main.min.js"></script>
 </body>
 
