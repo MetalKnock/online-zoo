@@ -1,7 +1,25 @@
 $color-text-navigation: #fff;
 $color-text-navigation-hover: #d69376;
+$light-gray: #f1f3f2;
+$gray_smoky: #ababab;
 $background-color: #000;
 $background-color2: #fff;
+$background-color3: #f5f7f6;
+$background-color4: rgba(196, 196, 196, 0.5);
+$background-color5: #111115;
+$text-color: #fff;
+$text-color2: #333b41;
+$text-color3: #000;
+$text-color4: #fe9013;
+$text-color5: #bdbdbd;
+$highlight-color: #ffee2e;
+$frosted-glass-white: rgba(253, 253, 255, 0.52);
+$btn-hover-color: #e47209;
+$btn-active-color: #4b9200;
+$btn-disabled-color: #767474;
+$btn-mistake-color: #d31414;
+
+$color-gradiend: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 $background-gradiend-pick-and-feed: linear-gradient(
     315.75deg,
     rgba(254, 210, 144, 0.7) 30.06%,
@@ -24,16 +42,22 @@ $background-gradiend-pick-and-feed: linear-gradient(
     #eaf7fe 127.9%,
     #eaf7fe 149.54%
   );
-$text-color: #fff;
-$text-color2: #333b41;
-$text-color3: #000;
-$text-color4: #fe9013;
-$highlight-color: #ffee2e;
-$color-gradiend: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-$frosted-glass-white: rgba(253, 253, 255, 0.52);
-$btn-hover-color: #e47209;
-$btn-active-color: #4b9200;
-$btn-disabled-color: #767474;
+$pink-gradient: linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  );
 
 @mixin color-text-navigation-active {
   background-color: #f9804b;
