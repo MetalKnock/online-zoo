@@ -1,3 +1,4 @@
+$transition-time: 0.3s;
 $number-dots: 8;
 $color-text-navigation: #fff;
 $color-text-navigation-hover: #d69376;
@@ -10,6 +11,7 @@ $background-color4: rgba(196, 196, 196, 0.5);
 $background-color5: #111115;
 $background-color6: #72828e;
 $background-color7: #404950;
+$background-color8: rgba(196, 196, 196, 0.8);
 $text-color: #fff;
 $text-color2: #333b41;
 $text-color3: #000;
@@ -65,7 +67,6 @@ $pink-gradient: linear-gradient(
   );
 
 @mixin color-text-navigation-active {
-  background-color: #f9804b;
   background-image: $color-gradiend;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
