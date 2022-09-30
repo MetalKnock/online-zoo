@@ -43,6 +43,11 @@
                         href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
                         ©</a>
                 </div>
+                <nav class="header__burger-menu burger-menu ">
+                    <img class="burger-menu__line" src="./images/header/burger-menu-line.svg" alt="burger menu line">
+                    <img class="burger-menu__line" src="./images/header/burger-menu-line.svg" alt="burger menu line">
+                    <img class="burger-menu__line" src="./images/header/burger-menu-line.svg" alt="burger menu line">
+                </nav>
             </div>
         </header>
         <main class="page-donate">
@@ -82,7 +87,7 @@
                             <div class="form__text">Amount</div>
                             <div class="form__slider-dot slider-dot">
                                 <input class="slider-dot__input" type="radio" name="slider-dot" id="1">
-                                <label class="slider-dot__label" for="1" data-price="$5000"></label>
+                                <label class="slider-dot__label slider-dot__label" for="1" data-price="$5000"></label>
                                 <input class="slider-dot__input" type="radio" name="slider-dot" id="2">
                                 <label class="slider-dot__label" for="2" data-price="$2000"></label>
                                 <input class="slider-dot__input" type="radio" name="slider-dot" id="3">
@@ -103,8 +108,7 @@
                             <div class="form__another-amount another-amount">
                                 <input class="another-amount__input" id="another-amount" type="number"
                                     placeholder="Another amount" min="1"
-                                    oninput="this.value = this.value > 9999 ? 9999 : Math.abs(this.value)">
-
+                                    oninput="this.value = this.value > 9999 ? 9999 : Math.abs(this.value)" required>
                                 <label class="another-amount__label" for="another-amount"></label>
                             </div>
                             <div class="form__types-of-subscription types-of-subscription">
@@ -121,7 +125,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <button class="form__button btn">Feed a friend now</button>
+                            <button class="form__button btn" type="submit">Feed a friend now</button>
                         </form>
                         <div class="donate__text">Share with your friends on social networks </div>
                     </div>
@@ -135,7 +139,7 @@
                         <h2 class="logo__title">PetStory online</h2>
                         <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
                     </a>
-                    <a href="./donate.html">
+                    <a class='footer__link' href="./donate.html">
                         <button class="footer__button btn">donate for volunteers</button>
                     </a>
                     <div class="footer__socials socials">
@@ -163,7 +167,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer__column">
+                <div class="footer__column footer__column--curve-layout">
                     <nav class="footer__menu menu">
                         <ul class="menu__list">
                             <li class="menu__item">
@@ -190,14 +194,14 @@
                             <button class="subscribe__button button-submit" type="submit">Submit</button>
                         </div>
                     </form>
-                    <div class="footer__designed">
+                    <a class="footer__designed" href="#">
                         <div class="footer__designed-text">
                             Designed by Alisa Samborskaya
                         </div>
                         <div class="footer__designed-text">
                             ©RSSchool & ©Yem Digital 2021
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </footer>
