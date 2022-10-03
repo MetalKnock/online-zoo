@@ -307,7 +307,11 @@
     }
   }
   .burger-menu {
+    display: block;
+  }
+  .burger-menu-content {
     display: flex;
+    flex-direction: column;
   }
   .header__logo > .logo__img {
     top: 1.4rem;

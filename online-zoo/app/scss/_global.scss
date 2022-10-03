@@ -26,6 +26,11 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.body {
+  &--lock {
+    overflow: hidden;
+  }
+}
 @media (max-width: 1150px) {
   .container {
     padding: 0 30px;
