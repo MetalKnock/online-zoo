@@ -83,40 +83,7 @@
   .testimonials__title {
     margin-bottom: 2.8rem;
   }
-  .review__text {
-    max-width: 25.9rem;
-    max-height: 28.6rem;
-  }
-  .review {
-    max-width: 29.4rem;
-    padding: 1.5rem 2.1rem 4.4rem 1.6rem;
-  }
-  .slider-scroll__list {
-    justify-content: center;
-    gap: 3.2rem;
-    margin-bottom: 2rem;
-  }
-  .slider-scroll__list li:nth-child(n + 4) {
-    display: none;
-  }
-  .slider-scroll__scroll-wraper {
-    width: 39rem;
-  }
-  .slider-scroll {
-    &__scroll {
-      &::-webkit-slider-thumb {
-        width: 7.5rem;
-        height: 0.6rem;
-      }
-      &::-moz-range-thumb {
-        width: 7.5rem;
-        height: 0.6rem;
-      }
-    }
-  }
-  .testimonials__slider-scroll {
-    margin-bottom: 5.2rem;
-  }
+
   .testimonials__background {
     width: 32rem;
     bottom: -8rem;
@@ -125,6 +92,16 @@
   }
   .testimonials__button {
     margin-right: 64rem;
+  }
+  .review {
+    flex: 0 0 22.5%;
+  }
+  .user__name {
+    font-size: 1.4rem;
+  }
+  .user__inner {
+    gap: 1rem;
+    font-size: 1.2rem;
   }
 
   .pick-and-feed {
@@ -186,6 +163,39 @@
   }
 }
 @media (max-width: 1000px) {
+  .review__text {
+    max-width: 25.9rem;
+    max-height: 28.6rem;
+  }
+  .review {
+    max-width: 29.4rem;
+    padding: 1.5rem 2.1rem 4.4rem 1.6rem;
+    flex: 0 0 31%;
+  }
+  .slider-scroll__list {
+    gap: 3.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .slider-scroll__scroll-wraper {
+    width: 39rem;
+  }
+  .slider-scroll {
+    &__scroll {
+      &::-webkit-slider-thumb {
+        width: 7.5rem;
+        height: 0.6rem;
+      }
+      &::-moz-range-thumb {
+        width: 7.5rem;
+        height: 0.6rem;
+      }
+    }
+  }
+  .testimonials__slider-scroll {
+    margin-bottom: 5.2rem;
+  }
+
   .menu__link {
     padding: 2.9rem 1.9rem 2.9rem 2.9rem;
   }
@@ -195,6 +205,13 @@
   }
   .footer__column:last-child {
     margin-right: 1rem;
+  }
+}
+@media (max-width: 970px) {
+  .review {
+    max-width: 29.4rem;
+    padding: 1.5rem 2.1rem 4.4rem 1.6rem;
+    flex: 0 0 30.5%;
   }
 }
 @media (max-width: 950px) {
@@ -378,6 +395,7 @@
     padding-top: 6.1rem;
     padding-bottom: 8rem;
   }
+
   .slider-scroll__list {
     gap: 1.5rem;
     margin-bottom: 2rem;
@@ -385,6 +403,9 @@
   }
   .review {
     max-width: none;
+  }
+  .review:nth-child(n + 4) {
+    display: none;
   }
   .review__text {
     max-width: none;

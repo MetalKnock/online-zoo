@@ -1,4 +1,7 @@
 @media (max-width: 1000px) {
+  .form__another-amount {
+    margin-bottom: 2.3rem;
+  }
   .page-donate__hero {
     padding: 5rem;
     background-size: 158%;
@@ -63,24 +66,24 @@
   }
   .pick-and-feed-a-friend__title {
     font-size: 2.4rem;
-    margin-bottom: 1.6rem;
-    line-height: calc(29 / 24 * 100%);
+    margin-bottom: 1.8rem;
+    line-height: 120.8333333333%;
   }
   .pick-and-feed-a-friend__title--orange {
     font-size: 3.6rem;
   }
   .pick-and-feed-a-friend__container {
     padding-top: 3.1rem;
-    padding-bottom: 3.1rem;
+    padding-bottom: 4.6rem;
   }
   .pick-and-feed-a-friend__text {
-    margin-bottom: 3rem;
+    margin-bottom: 3.4rem;
   }
   .pick-and-feed-a-friend__title:nth-last-child(2) {
-    margin-bottom: 3rem;
+    margin-bottom: 3.3rem;
   }
   .donate {
-    padding: 3rem 2.6rem 4.5rem 2.6rem;
+    padding: 3rem 2.6rem 3.1rem 2.6rem;
   }
   .donate__title {
     margin-bottom: 2.1rem;
@@ -127,7 +130,7 @@
     width: 18rem;
   }
   .form__another-amount {
-    margin-bottom: 3.1rem;
+    margin-bottom: 2.8rem;
   }
 }
 @media (max-width: 550px) {
@@ -209,7 +212,7 @@
     font-size: 1.3rem;
   }
   .form__another-amount {
-    margin-bottom: 2.6rem;
+    margin-bottom: 2.3rem;
   }
   .form__types-of-subscription {
     margin-bottom: 2.8rem;
@@ -247,5 +250,8 @@
   }
   .form__types-of-subscription {
     margin-right: 2rem;
+  }
+  .pick-and-feed-a-friend__title:nth-last-child(2) {
+    margin-bottom: 3rem;
   }
 }
