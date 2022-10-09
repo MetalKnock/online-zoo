@@ -804,3 +804,19 @@
     margin-left: auto;
   }
 }
+@media (max-height: 428px) {
+  .popup__review {
+    min-height: 0;
+  }
+  .popup__wrapper {
+    width: 100%;
+    min-height: 0;
+  }
+  .popup {
+    width: 100%;
+  }
+  .popup__review > .review__text {
+    max-width: none;
+    max-height: 20rem;
+  }
+}
