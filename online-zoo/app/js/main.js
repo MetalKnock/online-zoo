@@ -781,6 +781,11 @@ const openTestimonailPopup = function (e) {
   popup.innerHTML = e.target.innerHTML;
 };
 
+//preloader//
+window.addEventListener("load", function () {
+  document.querySelector(".preloader").style.display = "none";
+});
+
 //fix pages change client width//
 
 const fixWhenChangingWindowLanding = function () {
