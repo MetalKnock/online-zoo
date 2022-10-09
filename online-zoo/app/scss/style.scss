@@ -141,7 +141,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     gap: 6.1rem;
   }
 
@@ -300,9 +300,30 @@
 
 .slider {
   position: relative;
+  width: 100%;
+  &__wrapper {
+    overflow: hidden;
+  }
   &__list {
     display: flex;
+    padding: 1px !important;
     gap: 3rem;
+    position: relative;
+    left: -1188px;
+  }
+  &__item {
+    flex: 0 0 100%;
+  }
+  &__columns {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   &__column {
@@ -317,7 +338,14 @@
     left: 0;
   }
 }
-
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 3s;
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 3s;
+}
 .column {
   &__list {
   }
@@ -357,10 +385,11 @@
 
   &__inner {
     max-width: 29.4rem;
-    margin-right: 4.8rem;
+
     transition: all 1s;
     position: relative;
     z-index: 1;
+    overflow: hidden;
   }
 
   &__title {
@@ -620,17 +649,21 @@
     object-fit: none;
     object-position: top;
   }
+  &__popup {
+  }
 }
 
 .slider-scroll {
   width: 100%;
   overflow: hidden;
   &__list {
+    position: relative;
+    top: 0px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 2.1rem;
     gap: 3rem;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   &__item {
@@ -699,7 +732,12 @@
   flex: 0 0 23%;
   display: flex;
   flex-direction: column;
-
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   &__user {
     margin-bottom: 1rem;
   }
@@ -724,6 +762,7 @@
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    z-index: 2;
   }
   &--active {
     display: block;
@@ -1213,7 +1252,7 @@
     height: 5rem;
     z-index: 2;
     &::before {
-      content: attr(data-price);
+      content: attr(dataPrice);
       position: absolute;
       left: 50%;
       padding-top: 0.7rem;
@@ -1255,7 +1294,8 @@
     display: block;
     position: absolute;
     top: 50%;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.3s ease, opacity 0s ease;
+
     transform: translate(-50%, -50%);
     opacity: 0;
     user-select: none;
@@ -1293,6 +1333,10 @@
       &:valid {
         & {
           border-color: $btn-active-color;
+          & ~ .another-amount__label::after {
+            filter: brightness(0) saturate(100%) invert(47%) sepia(81%)
+              saturate(3939%) hue-rotate(61deg) brightness(96%) contrast(101%);
+          }
         }
       }
     }
@@ -1487,7 +1531,7 @@
   }
 }
 .burger-background {
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -1495,10 +1539,76 @@
   height: 100vh;
   background: $background-color9;
   z-index: 99;
-
+  opacity: 0;
   transition: all 0.6s;
   &--active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    backdrop-filter: blur(1px);
+  }
+}
+
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 100;
+  &--active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  &__wrapper {
+    // background: $background-color3;
+    width: 32rem;
+    min-height: 42.8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.2rem 1rem 1.7rem 1.7rem;
+  }
+  &__close {
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(41%) sepia(93%)
+        saturate(1384%) hue-rotate(7deg) brightness(99%) contrast(93%);
+    }
+    &:active {
+      filter: brightness(0) saturate(100%) invert(39%) sepia(98%)
+        saturate(1357%) hue-rotate(59deg) brightness(91%) contrast(101%);
+    }
+  }
+  &__review {
+    margin-top: 0.8rem;
+    flex: 0 0 91.13% !important;
+    padding: 1.5rem 1.4rem 1.9rem 1.6rem !important;
+    min-height: 39.1rem;
+    & > .review__text {
+      max-width: 25.9rem;
+      max-height: 28.6rem;
+    }
+  }
+  &__background {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+    opacity: 0;
+    &--active {
+      visibility: visible;
+      opacity: 1;
+      backdrop-filter: blur(1px);
+    }
   }
 }
 
