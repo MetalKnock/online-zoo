@@ -1,3 +1,4 @@
+"use strict";
 let animationEnabledPetsSlider = false;
 let animationEnabledTestimonailsSlider = false;
 let popupEnabledTestimonails = false;
@@ -499,6 +500,7 @@ const sliderDot = function () {
         sliderDotsInput[i].checked = false;
       }
     });
+    hideRollerWhenSliderdotIsScaledDown();
   });
   sliderDot.addEventListener("click", (e) => {
     if (event.target.className === "slider-dot__label") {
@@ -663,19 +665,6 @@ const swipeTestimonialsSlider = function () {
     distY = touchObj.pageY - startY;
     elapsedTime = new Date().getTime() - startTime;
 
-    // if (
-    //   (distY < 0 &&
-    //     surface.style.top !==
-    //       `-${
-    //         (lengthCards - 3) * heightCard + gapSurface * (lengthCards - 4)
-    //       }px`) ||
-    //   (distY > 0 && surface.style.top !== "0px")
-    // ) {
-    //   stopMovingPage = true;
-    // } else {
-    //   stopMovingPage = false;
-    // }
-
     if (elapsedTime <= allowedTime) {
       if (document.documentElement.clientWidth > 880) {
         if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
@@ -821,6 +810,7 @@ const fixWhenChangingWindowLanding = function () {
 function fixWhenChangingWindowDonate() {
   window.addEventListener("resize", function () {
     hideRollerWhenSliderdotIsScaledDown();
+    startValueSliderDot();
   });
 }
 
