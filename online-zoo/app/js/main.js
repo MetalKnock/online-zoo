@@ -1,11 +1,9 @@
-"use strict";
 let animationEnabledPetsSlider = false;
 let animationEnabledTestimonailsSlider = false;
 let popupEnabledTestimonails = false;
 let numberOfCards = 6;
 
 //burger//
-
 const clickBurgerMenu = function () {
   const burgerMenu = document.querySelector(".burger-menu");
   const burgerBackground = document.querySelector(".burger-background");
@@ -25,7 +23,6 @@ const clickBurgerMenu = function () {
     });
   }
 };
-
 //slider pets//
 
 const moveLeft = function () {
@@ -64,164 +61,160 @@ const getUniqueRandomNumbers = function (amount, max) {
   return arrRandomNumbers;
 };
 
-const getUniqueRandomAnimals = function (amount) {
-  const giantPandas = {
-    name: "giant pandas",
-    native: "Native to Southwest China",
-    type: "herbivores",
-    img: "./images/pets/giant_Pandas.jpg",
-  };
-  const eagles = {
-    name: "eagles",
-    native: "Native to South America",
-    type: "carnivores",
-    img: "./images/pets/Eagles.jpg",
-  };
-  const gorillas = {
-    name: "Gorillas",
-    native: "Native to Congo",
-    type: "herbivores",
-    img: "./images/pets/Gorillas.jpg",
-  };
-  const twoToedSloth = {
-    name: "Two-toed Sloth",
-    native: "Mesoamerica, South America",
-    type: "herbivores",
-    img: "./images/pets/Two-toed_Sloth.jpg",
-  };
-  const cheetahs = {
-    name: "cheetahs",
-    native: "Native to Africa",
-    type: "carnivores",
-    img: "./images/pets/cheetahs.jpg",
-  };
-  const penguins = {
-    name: "Penguins",
-    native: "Native to Antarctica",
-    type: "carnivores",
-    img: "./images/pets/Penguins.jpg",
-  };
-  const alligators = {
-    name: "Alligators",
-    native: "Native to United States",
-    type: "carnivores",
-    img: "./images/pets/Alligators.jpg",
-  };
-  const gorillas2 = {
-    name: "Gorillas",
-    native: "Native to Congo",
-    type: "herbivores",
-    img: "./images/pets/Gorillas2.jpg",
-  };
-
-  const alpaca = {
-    name: "Alpaca",
-    native: "Native to South America",
-    type: "herbivores",
-    img: "./images/pets/Alpaca.jpg",
-  };
-  const bear = {
-    name: "Bear",
-    native: "North America",
-    type: "carnivores",
-    img: "./images/pets/Bear.jpg",
-  };
-  const camelus = {
-    name: "Camelus",
-    native: "Native to Africa",
-    type: "herbivores",
-    img: "./images/pets/Camelus.jpg",
-  };
-  const crocodile = {
-    name: "Crocodile",
-    native: "Native to Australia",
-    type: "carnivores",
-    img: "./images/pets/Crocodile.jpg",
-  };
-  const elephant = {
-    name: "Elephant",
-    native: "Native to Asia",
-    type: "herbivores",
-    img: "./images/pets/Elephant.jpg",
-  };
-  const giraffe = {
-    name: "Giraffe",
-    native: "Native to Africa",
-    type: "herbivores",
-    img: "./images/pets/Giraffe.jpg",
-  };
-  const hippopotamus = {
-    name: "Hippopotamus",
-    native: "Native to Africa",
-    type: "herbivores",
-    img: "./images/pets/Hippopotamus.jpg",
-  };
-  const koala = {
-    name: "Koala",
-    native: "Native to Australia",
-    type: "herbivores",
-    img: "./images/pets/Koala.jpg",
-  };
-  const lion = {
-    name: "Lion",
-    native: "Native to Africa",
-    type: "carnivores",
-    img: "./images/pets/Lion.jpg",
-  };
-  const monkey = {
-    name: "Monkey",
-    native: "Native to South America",
-    type: "herbivores",
-    img: "./images/pets/Monkey.jpg",
-  };
-  const porcupine = {
-    name: "Porcupine",
-    native: "Native to Canada",
-    type: "herbivores",
-    img: "./images/pets/Porcupine.jpg",
-  };
-  const fox = {
-    name: "Red fox",
-    native: "Native to North America",
-    type: "carnivores",
-    img: "./images/pets/Red_fox.jpg",
-  };
-  const struthioCamelus = {
-    name: "Struthio Camelus",
-    native: "Native to Africa",
-    type: "carnivores",
-    img: "./images/pets/Struthio_camelus.jpg",
-  };
-  const zebra = {
-    name: "Zebra",
-    native: "Native to Africa",
-    type: "herbivores",
-    img: "./images/pets/Zebra.jpg",
-  };
-  const animals = [
-    giantPandas,
-    eagles,
-    gorillas,
-    twoToedSloth,
-    cheetahs,
-    penguins,
-    alligators,
-    gorillas2,
-    alpaca,
-    bear,
-    camelus,
-    crocodile,
-    elephant,
-    giraffe,
-    hippopotamus,
-    koala,
-    lion,
-    monkey,
-    porcupine,
-    fox,
-    struthioCamelus,
-    zebra,
+const getDataAnimals = function () {
+  return [
+    {
+      name: "giant pandas",
+      native: "Native to Southwest China",
+      type: "herbivores",
+      img: "./images/pets/giant_Pandas.jpg",
+      icon: "./images/pets/icons/panda.png",
+    },
+    {
+      name: "eagles",
+      native: "Native to Los Angeles",
+      type: "carnivores",
+      img: "./images/pets/Eagles.jpg",
+      icon: "./images/pets/icons/eagle.png",
+    },
+    {
+      name: "Gorillas",
+      native: "Native to Congo",
+      type: "herbivores",
+      img: "./images/pets/Gorillas.jpg",
+      icon: "./images/pets/icons/gorilla.png",
+    },
+    {
+      name: "Two-toed Sloth",
+      native: "Native to Venezuela",
+      type: "herbivores",
+      img: "./images/pets/Two-toed_Sloth.jpg",
+      icon: "./images/pets/icons/sloth.png",
+    },
+    {
+      name: "cheetahs",
+      native: "Native to Africa",
+      type: "carnivores",
+      img: "./images/pets/cheetahs.jpg",
+      icon: "./images/pets/icons/cheetah.png",
+    },
+    {
+      name: "Penguins",
+      native: "Native to Antarctica",
+      type: "carnivores",
+      img: "./images/pets/Penguins.jpg",
+      icon: "./images/pets/icons/penguin.png",
+    },
+    {
+      name: "Alligators",
+      native: "Native to Mexico",
+      type: "carnivores",
+      img: "./images/pets/Alligators.jpg",
+      icon: "./images/pets/icons/alligator.png",
+    },
+    {
+      name: "Alpaca",
+      native: "Native to Southern Peru",
+      type: "herbivores",
+      img: "./images/pets/Alpaca.jpg",
+      icon: "./images/pets/icons/alpaca.png",
+    },
+    {
+      name: "Bear",
+      native: "Native to Alaska",
+      type: "carnivores",
+      img: "./images/pets/Bear.jpg",
+      icon: "./images/pets/icons/bear.png",
+    },
+    {
+      name: "Camel",
+      native: "Native to Somalia",
+      type: "herbivores",
+      img: "./images/pets/Camelus.jpg",
+      icon: "./images/pets/icons/camel.png",
+    },
+    {
+      name: "Crocodile",
+      native: "Native to Australia",
+      type: "carnivores",
+      img: "./images/pets/Crocodile.jpg",
+      icon: "./images/pets/icons/crocodile.png",
+    },
+    {
+      name: "Elephant",
+      native: "Native to India",
+      type: "herbivores",
+      img: "./images/pets/Elephant.jpg",
+      icon: "./images/pets/icons/elephant.png",
+    },
+    {
+      name: "Giraffe",
+      native: "Native to Namibia",
+      type: "herbivores",
+      img: "./images/pets/Giraffe.jpg",
+      icon: "./images/pets/icons/giraffe.png",
+    },
+    {
+      name: "Hippopotamus",
+      native: "Native to Ethiopia",
+      type: "herbivores",
+      img: "./images/pets/Hippopotamus.jpg",
+      icon: "./images/pets/icons/hippo.png",
+    },
+    {
+      name: "Koala",
+      native: "Native to Queensland",
+      type: "herbivores",
+      img: "./images/pets/Koala.jpg",
+      icon: "./images/pets/icons/koala.png",
+    },
+    {
+      name: "Lion",
+      native: "Native to Asia",
+      type: "carnivores",
+      img: "./images/pets/Lion.jpg",
+      icon: "./images/pets/icons/lion.png",
+    },
+    {
+      name: "Monkey",
+      native: "Native to Brazil",
+      type: "herbivores",
+      img: "./images/pets/Monkey.jpg",
+      icon: "./images/pets/icons/monkey.png",
+    },
+    {
+      name: "Porcupine",
+      native: "Native to Canada",
+      type: "herbivores",
+      img: "./images/pets/Porcupine.jpg",
+      icon: "./images/pets/icons/porcupine.png",
+    },
+    {
+      name: "Red fox",
+      native: "Native to North America",
+      type: "carnivores",
+      img: "./images/pets/Red_fox.jpg",
+      icon: "./images/pets/icons/fox.png",
+    },
+    {
+      name: "Struthio Camelus",
+      native: "Native to Angola",
+      type: "carnivores",
+      img: "./images/pets/Struthio_camelus.jpg",
+      icon: "./images/pets/icons/ostrich.png",
+    },
+    {
+      name: "Zebra",
+      native: "Native to Northern Kenya",
+      type: "herbivores",
+      img: "./images/pets/Zebra.jpg",
+      icon: "./images/pets/icons/zebra.png",
+    },
   ];
+};
+
+const getUniqueRandomAnimals = function (amount) {
+  const animals = getDataAnimals();
   let amountOfCards = 6;
   const uniqueRandomNumbers = getUniqueRandomNumbers(
     amountOfCards,
@@ -807,6 +800,87 @@ const fixWhenChangingWindowLanding = function () {
   });
 };
 
+const map = function () {
+  const map = L.map("map", {
+    zoomControl: false,
+  }).setView([50, 0], 2);
+
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 8,
+    minZoom: 2,
+  }).addTo(map);
+
+  L.control
+    .zoom({
+      position: "bottomright",
+    })
+    .addTo(map);
+
+  const southWest = L.latLng(-89, -179),
+    northEast = L.latLng(89, 179);
+  const bounds = L.latLngBounds(southWest, northEast);
+
+  map.setMaxBounds(bounds);
+  map.on("drag", function () {
+    map.panInsideBounds(bounds, { animate: false });
+  });
+
+  const dataAnimals = getDataAnimals();
+  dataAnimals.map((val, i) => {
+    if (i === 0) {
+      //DETELE!!!!!!!!!!!!!!!!!!!!!!!
+
+      getLatitudeLongitude(val.native.slice(10)).then(
+        (latitudeLongitude) => {
+          const latitude = latitudeLongitude[0];
+          const longitude = latitudeLongitude[1];
+
+          const myIcon = L.icon({
+            iconUrl: `${val.icon}`,
+            iconSize: [40, 40],
+            iconAnchor: [40, 40],
+            popupAnchor: [-20, -40],
+          });
+          const marker = L.marker([latitude, longitude], {
+            icon: myIcon,
+          }).addTo(map);
+          marker.bindPopup(`
+          <div class="map__popup">
+            <div class='map__popup-text'>
+              <div class='map__popup-name'>
+                ${val.name.toUpperCase()}
+              </div>
+              <div class='map__popup-location'>
+                ${val.native.slice(10)}
+              </div>
+            </div>
+            <a class='map__popup-link' href="#">
+              <button class="map__popup-button btn">
+                Watch online
+              </button>
+            </a>
+          </div>
+          `);
+        },
+        (error) => error
+      );
+    }
+  });
+};
+
+async function getLatitudeLongitude(country) {
+  const url = `http://api.positionstack.com/v1/forward?access_key=a68c59aab80f3a5bf3366583b6eeaf44&query=${country}`;
+  const location = await fetch(url);
+  const locationText = await location.json();
+  const latitudeLongitude = [];
+  latitudeLongitude.push(locationText.data[0].latitude);
+  latitudeLongitude.push(locationText.data[0].longitude);
+
+  return latitudeLongitude;
+}
+
 function fixWhenChangingWindowDonate() {
   window.addEventListener("resize", function () {
     hideRollerWhenSliderdotIsScaledDown();
@@ -842,5 +916,13 @@ const donatePage = function () {
   }
 };
 
+const mapPage = function () {
+  if (document.querySelector(".page-map")) {
+    clickBurgerMenu();
+    map();
+  }
+};
+
 landingPage();
 donatePage();
+mapPage();

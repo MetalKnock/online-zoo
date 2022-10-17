@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online zoo</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <a class="header__logo logo" href="index.html">
+                    <h1 class="logo__title">PetStory online</h1>
+                    <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
+                </a>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link " href="./index.html">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active" href="./map.html">Map</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./zoos.html">Zoos</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./donate.html">Donate</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__designed designed">
+                    <a class="designed__link"
+                        href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
+                        ©</a>
+                </div>
+                <nav class="header__burger-menu burger-menu">
+                    <span class="burger-menu__icon"></span>
+                </nav>
+                <nav class="header__burger-menu-content burger-menu-content ">
+                    <a class="burger-menu-content__logo logo" href="./index.html">
+                        <h2 class="logo__title">PetStory online</h2>
+                        <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
+                    </a>
+                    <ul class="burger-menu-content__list">
+                        <li class="burger-menu-content__item">
+                            <a class="burger-menu-content__link burger-menu-content__link--active"
+                                href="./index.html">About</a>
+                        </li>
+                        <li class="burger-menu-content__item">
+                            <a class="burger-menu-content__link" href="./map.html">Map</a>
+                        </li>
+                        <li class="burger-menu-content__item">
+                            <a class="burger-menu-content__link" href="./zoos.html">Zoos</a>
+                        </li>
+                        <li class="burger-menu-content__item">
+                            <a class="burger-menu-content__link" href="./donate.html">Donate</a>
+                        </li>
+                        <li class="burger-menu-content__item">
+                            <a class="burger-menu-content__link" href="#">Contact us</a>
+                        </li>
+                        <li class="burger-menu-content__item">
+                            <a class="burger-menu-content__link"
+                                href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
+                                ©</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="burger-background"></div>
+            </div>
+        </header>
+
+        <main class="page-map">
+            <div id="map"></div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__column">
+                    <a class="footer__logo logo" href="index.html">
+                        <h2 class="logo__title">PetStory online</h2>
+                        <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
+                    </a>
+                    <a class='footer__link' href="./donate.html">
+                        <button class="footer__button btn">donate for volunteers</button>
+                    </a>
+                    <div class="footer__socials socials">
+                        <ul class="socials__list">
+                            <li class="socials__item">
+                                <a href="https://www.facebook.com/" class="socials__link">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://twitter.com/" class="socials__link">
+                                    Twitter
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://www.instagram.com/" class="socials__link">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://www.youtube.com/" class="socials__link">
+                                    YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <nav class="footer__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link " href="index.html">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link menu__link--active" href="./map.html">Map</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./zoos.html">Zoos</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__column">
+                    <form class='footer__subscribe subscribe' action="">
+                        <h4 class="subscribe__title">Subscribe to our news</h4>
+                        <div class="subscribe__inner">
+                            <input class="subscribe__email" type="email" name="" id="" placeholder="Enter your email"
+                                required>
+                            <button class="subscribe__button button-submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <a class="footer__designed" href="#">
+                        <div class="footer__designed-text">
+                            Author Ivanov Dmitry
+                        </div>
+                        <div class="footer__designed-text">
+                            ©RSSchool & ©Yem Digital 2022
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
