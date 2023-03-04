@@ -829,24 +829,21 @@ const map = function () {
 
   const dataAnimals = getDataAnimals();
   dataAnimals.map((val, i) => {
-    if (i === 0) {
-      //DETELE!!!!!!!!!!!!!!!!!!!!!!!
+    getLatitudeLongitude(val.native.slice(10)).then(
+      (latitudeLongitude) => {
+        const latitude = latitudeLongitude[0];
+        const longitude = latitudeLongitude[1];
 
-      getLatitudeLongitude(val.native.slice(10)).then(
-        (latitudeLongitude) => {
-          const latitude = latitudeLongitude[0];
-          const longitude = latitudeLongitude[1];
-
-          const myIcon = L.icon({
-            iconUrl: `${val.icon}`,
-            iconSize: [40, 40],
-            iconAnchor: [40, 40],
-            popupAnchor: [-20, -40],
-          });
-          const marker = L.marker([latitude, longitude], {
-            icon: myIcon,
-          }).addTo(map);
-          marker.bindPopup(`
+        const myIcon = L.icon({
+          iconUrl: `${val.icon}`,
+          iconSize: [40, 40],
+          iconAnchor: [40, 40],
+          popupAnchor: [-20, -40],
+        });
+        const marker = L.marker([latitude, longitude], {
+          icon: myIcon,
+        }).addTo(map);
+        marker.bindPopup(`
           <div class="map__popup">
             <div class='map__popup-text'>
               <div class='map__popup-name'>
@@ -863,10 +860,9 @@ const map = function () {
             </a>
           </div>
           `);
-        },
-        (error) => error
-      );
-    }
+      },
+      (error) => error
+    );
   });
 };
 
