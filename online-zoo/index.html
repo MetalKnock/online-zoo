@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online zoo</title>
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo logo" href="index.html">
+          <h1 class="logo__title">PetStory online</h1>
+          <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="./index.html">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="./map.html">Map</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="./zoos.html">Zoos</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="./donate.html">Donate</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__designed designed">
+          <a class="designed__link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
+            ©</a>
+        </div>
+        <nav class="header__burger-menu burger-menu">
+          <span class="burger-menu__icon"></span>
+        </nav>
+        <nav class="header__burger-menu-content burger-menu-content ">
+          <a class="burger-menu-content__logo logo" href="./index.html">
+            <h2 class="logo__title">PetStory online</h2>
+            <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
+          </a>
+          <ul class="burger-menu-content__list">
+            <li class="burger-menu-content__item">
+              <a class="burger-menu-content__link burger-menu-content__link--active" href="./index.html">About</a>
+            </li>
+            <li class="burger-menu-content__item">
+              <a class="burger-menu-content__link" href="./map.html">Map</a>
+            </li>
+            <li class="burger-menu-content__item">
+              <a class="burger-menu-content__link" href="./zoos.html">Zoos</a>
+            </li>
+            <li class="burger-menu-content__item">
+              <a class="burger-menu-content__link" href="./donate.html">Donate</a>
+            </li>
+            <li class="burger-menu-content__item">
+              <a class="burger-menu-content__link" href="#">Contact us</a>
+            </li>
+            <li class="burger-menu-content__item">
+              <a class="burger-menu-content__link"
+                href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
+                ©</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger-background"></div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__hero hero">
+        <div class="hero__container container">
+          <h2 class="hero__title">Watch your <span>favorite</span> animal online</h2>
+          <button class="hero__button btn">watch online</button>
+        </div>
+      </section>
+      <section class="page__backstage backstage">
+        <div class="backstage__container container">
+          <button class="backstage__button btn">watch online</button>
+          <img class="backstage__image" src="./images/backstage/bamboo_cap.jpg" alt="elderly man in a bamboo cap">
+          <div class="backstage__content content">
+            <h2 class="content__title">The Backstage of the Wilderness World.</h2>
+            <div class="content__text">The site was founded on the basis of a volunteer movement to protect and care
+              for animals.</div>
+            <h4 class="content__subtitle">How it works</h4>
+            <p class="content__paragraph">The main goal is to help the animals, as well as the nature reserves and zoos
+              where they are kept. We are currently working on video projects targeting pandas in China, eagles on an
+              island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more
+              than
+              1,500 mammals and reptiles.</p>
+          </div>
+        </div>
+        <img class="backstage__background" src="./images/backstage/flower_foto1.png" alt="flower foto">
+      </section>
+      <section class="page__pets pets">
+        <div class="pets__container container">
+          <div class="pets__slider slider">
+            <div class="slider__wrapper">
+              <ul class="slider__list">
+                <li class="slider__item slider__item--left">
+                  <ul class="slider__columns">
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Alpaca.jpg" alt="pandas">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">giant Pandas</h5>
+                                <div class="card__location">Native to Southwest China</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Two-toed_Sloth.jpg" alt="Two-toed Sloth">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Two-toed Sloth</h5>
+                                <div class="card__location">Mesoamerica, South America</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Eagles.jpg" alt="eagles">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Eagles</h5>
+                                <div class="card__location">Native to South America</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/cheetahs.jpg" alt="cheetahs">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">cheetahs</h5>
+                                <div class="card__location">Native to Africa</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Gorillas.jpg" alt="gorillas">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Gorillas</h5>
+                                <div class="card__location">Native to Congo</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Penguins.jpg" alt="penguins">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Penguins</h5>
+                                <div class="card__location">Native to Antarctica</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="slider__item slider__item--center">
+                  <ul class="slider__columns">
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/giant_Pandas.jpg" alt="pandas">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">giant Pandas</h5>
+                                <div class="card__location">Native to Southwest China</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Two-toed_Sloth.jpg" alt="Two-toed Sloth">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Two-toed Sloth</h5>
+                                <div class="card__location">Mesoamerica, South America</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Eagles.jpg" alt="eagles">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Eagles</h5>
+                                <div class="card__location">Native to South America</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/cheetahs.jpg" alt="cheetahs">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">cheetahs</h5>
+                                <div class="card__location">Native to Africa</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Gorillas.jpg" alt="gorillas">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Gorillas</h5>
+                                <div class="card__location">Native to Congo</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Penguins.jpg" alt="penguins">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Penguins</h5>
+                                <div class="card__location">Native to Antarctica</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="slider__item slider__item--right">
+                  <ul class="slider__columns">
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/giant_Pandas.jpg" alt="pandas">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">giant Pandas</h5>
+                                <div class="card__location">Native to Southwest China</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Two-toed_Sloth.jpg" alt="Two-toed Sloth">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Two-toed Sloth</h5>
+                                <div class="card__location">Mesoamerica, South America</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Eagles.jpg" alt="eagles">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Eagles</h5>
+                                <div class="card__location">Native to South America</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/cheetahs.jpg" alt="cheetahs">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">cheetahs</h5>
+                                <div class="card__location">Native to Africa</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="slider__column column">
+                      <ul class="column__list">
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Gorillas.jpg" alt="gorillas">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Gorillas</h5>
+                                <div class="card__location">Native to Congo</div>
+                              </div>
+                              <img class="card__type card__type--herbivores" src="./images/pets/herbivores.svg"
+                                alt="herbivores">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="column__item card">
+                          <div class="card__wrapper">
+                            <img class="card__image" src="./images/pets/Alligators.jpg" alt="penguins">
+                            <div class="card__content">
+                              <div class="card__inner">
+                                <h5 class="card__title">Penguins</h5>
+                                <div class="card__location">Native to Antarctica</div>
+                              </div>
+                              <img class="card__type card__type--carnivores" src="./images/pets/carnivores.svg"
+                                alt="carnivores">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="slider__navigation navigation">
+              <button class="navigation__arrow navigation__arrow--prev">
+                <img src="./images/pets/prev.svg" alt="prev">
+              </button>
+              <button class="navigation__arrow navigation__arrow--next">
+                <img src="./images/pets/next.svg" alt="next">
+              </button>
+            </div>
+          </div>
+          <button class="pets__button btn">choose your favorite</button>
+        </div>
+        <img class="pets__backround pets__backround--left" src="./images/pets/palm_foto1.png" alt="palm">
+        <img class="pets__backround pets__backround--rigth" src="./images/pets/strelitzia.png" alt="flower">
+      </section>
+      <section class="page__pick-and-feed pick-and-feed">
+        <div class="pick-and-feed__container container">
+          <div class="pick-and-feed__content">
+            <h2 class="pick-and-feed__title">Pick and feed a friend</h2>
+            <div class="pick-and-feed__inner">
+              <h5 class="pick-and-feed__subtitle">We know the animals bring you joy, and in these extraordinary times,
+                we’re
+                glad.</h5>
+              <div class="pick-and-feed__text">During a time when the COVID-19 epidemic is touching all of our lives,
+                we’re
+                proud and glad that people around the world find joy in PetStory.</div>
+              <div class="pick-and-feed__text">Even though the zoo has reopened, we need you now more than ever to help
+                us
+                deal with these problems. Please consider a gift to our
+                <a class="pick-and-feed__link" href="./donate.html">Emergency
+                  Support Fund</a>.
+              </div>
+            </div>
+            <div class="pick-and-feed__hot-it-works hot-it-works">
+              <h3 class="hot-it-works__title">How it works</h3>
+              <ul class="hot-it-works__list">
+                <li class="hot-it-works__item widjet">
+                  <div class="widjet__image">
+                    <img class="" src="./images/pick-and-feed/pay.svg" alt="pay">
+                  </div>
+                  <div class="widjet__text">Pay with card</div>
+                </li>
+                <li class="hot-it-works__item widjet">
+                  <div class="widjet__image">
+                    <img src="./images/pick-and-feed/zoo.svg" alt="zoo">
+                  </div>
+                  <div class="widjet__text">Payment goes to the zoo</div>
+                </li>
+                <li class="hot-it-works__item widjet">
+                  <div class="widjet__image">
+                    <img src="./images/pick-and-feed/monkey.svg" alt="monkey">
+                  </div>
+                  <div class="widjet__text">Your favourite animal gets delicious dish</div>
+                </li>
+              </ul>
+            </div>
+            <a href="./donate.html">
+              <button class="pick-and-feed__button btn">Feed a friend now</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="page__testimonials testimonials">
+        <div class="testimonials__container container">
+          <h2 class="testimonials__title">Testimonials</h2>
+          <div class="testimonials__slider-scroll slider-scroll">
+            <div class="slider-scroll__wrapper">
+              <ul class="slider-scroll__list">
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon.svg" alt="user icon">
+                    <div class="user__info">
+                      <div class="user__name">Michael John</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Today</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">The best online zoo I’ve met. My son delighted very much ljves to watch
+                    gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.
+                    My
+                    son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for
+                    animals.<br>
+                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                    jf
+                    the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much
+                    ljves
+                    to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon2.png" alt="user icon 2">
+                    <div class="user__info">
+                      <div class="user__name">Oskar Samborsky</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                    delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for
+                    animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
+                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                    jf
+                    the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much
+                    ljves
+                    to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>
+                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                    jf
+                    the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much
+                    ljves
+                    to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon3.png" alt="user icon 3">
+                    <div class="user__info">
+                      <div class="user__name">Fredericka Michelin</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                    jf
+                    the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much
+                    ljves
+                    to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>
+                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                    jf
+                    the ways to instill a love for animals.The best online zoo I’ve met.<br>
+                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                    jf
+                    the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much
+                    ljves
+                    to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon4.png" alt="user icon 4">
+                    <div class="user__info">
+                      <div class="user__name">Mila Riksha</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love
+                    for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                    zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted
+                    very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The
+                    best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
+                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                    jf
+                    the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much
+                    ljves
+                    to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon5.jpg" alt="user icon 5">
+                    <div class="user__info">
+                      <div class="user__name">Chuck Stockman</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    Would like to have spent longer with the beautiful baby panda, unfortunately "tidak boleh". Overall
+                    this is a good zoo, would be 5* if the front gate ticketing staff were less prejudiced
+
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon6.jpg" alt="user icon 6">
+                    <div class="user__info">
+                      <div class="user__name">Jenny Colgan</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    A fantastic experience for kids and adults alike! If anyone is looking for something to do around
+                    Oshawa, the Oshawa Zoo Fun Farm is the place! Plenty of friendly animals, both domestic and exotic.
+                    Kids had a wonderful time, got to know and like the animals, especially the babies. They were
+                    thrilled
+                    to get close to them, be able to feed them and watch them play.
+
+                    We will certainly be back soon to see how our new friends have grown and take more pictures.
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon7.jpg" alt="user icon 7">
+                    <div class="user__info">
+                      <div class="user__name">Carol Burnett</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    Nice place to visit with your family, a broad range of birds and animals, isn't the destination but
+                    the kids will enjoy it, I would recommend it and the entrance fee is very reasonable
+
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon8.jpg" alt="user icon 8">
+                    <div class="user__info">
+                      <div class="user__name">Gilbert Thomson</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    I can't believe my family went to visit the same zoo as others have described as so bad. We are
+                    regular zoo visitors and found this zoo to be one of the better ones we've visited. Definitely on
+                    par
+                    with Taronga Zoo in Sydney, for example. Even the situation was impressive - big steep mountains
+                    close
+                    on the horizon.
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon9.jpg" alt="user icon 9">
+                    <div class="user__info">
+                      <div class="user__name">Farrell Barclay</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    As a breeder of exotic animals and alternative livestock, and as the editor and publisher of a
+                    magazine which educates people on these animals, it has been a pleasure getting to know the owners
+                    of
+                    The Oshawa Zoo. They display some of the animals that were born on my farm because I appreciate the
+                    facility and the care given to them at Oshawa Zoo. Not only is this zoo a fun place to visit, but it
+                    is dedicated to giving its animals a good place in which to live out their lives.
+
+                    I highly recommend seeing for yourself the variety of contented animals found on display within its
+                    gates.
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon10.jpg" alt="user icon 10">
+                    <div class="user__info">
+                      <div class="user__name">Nikolina Babic</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    What a great zoo! I spent nearly five hours at the zoo and saw a very broad range of animals and
+                    birds. It was pretty cold so the animals were mostly inside.
+
+                  </div>
+                </li>
+                <li class="slider-scroll__item review">
+                  <div class="review__user user">
+                    <img class="user__icon" src="./images/testimonials/user_icon11.jpg" alt="user icon 11">
+                    <div class="user__info">
+                      <div class="user__name">Homer Potts</div>
+                      <div class="user__inner">
+                        <div class="user__location">Local Austria</div>
+                        <div class="user__date-review">Yesterday</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__text">
+                    I've been coming to the Oshawa zoo for years with my family. We so enjoy the relaxed atmosphere and
+                    the friendly and dedicated staff as well as the ever-evolving selection of animals from around the
+                    globe.
+
+                    We are fortunate to have the expertise of the Connell family who are world-renowned zoo-keepers with
+                    generations of experience --right here at our local zoo!
+
+                    THANK YOU for sharing these fascinating animal friends with us so that we may learn and increase our
+                    understanding of the animal kingdom.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="slider-scroll__scroll-wraper">
+              <input class="slider-scroll__scroll" type="range" min="0" max="7" value="0">
+            </div>
+          </div>
+          <div class="testimonials__popup popup">
+            <div class="popup__wrapper">
+              <img class="popup__close" src="./images/testimonials/x_icon.svg">
+              </img>
+              <div class="popup__review review">
+                <div class="review__user user">
+                  <img class="user__icon" src="./images/testimonials/user_icon.svg" alt="user icon">
+                  <div class="user__info">
+                    <div class="user__name">Michael John</div>
+                    <div class="user__inner">
+                      <div class="user__location">Local Austria</div>
+                      <div class="user__date-review">Today</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__text">The best online zoo I’ve met. My son delighted very much ljves to watch
+                  gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My
+                  son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for
+                  animals.<br>
+                  The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf
+                  the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves
+                  to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="popup__background"></div>
+          <button class="testimonials__button btn">leave feedback</button>
+        </div>
+        <img class="testimonials__background" src="./images/testimonials/leav_foto.png" alt="background image">
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__column">
+          <a class="footer__logo logo" href="index.html">
+            <h2 class="logo__title">PetStory online</h2>
+            <img class="logo__img" src="./images/header/bamboo.svg" alt="bamboo">
+          </a>
+          <a class='footer__link' href="./donate.html">
+            <button class="footer__button btn">donate for volunteers</button>
+          </a>
+          <div class="footer__socials socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a href="https://www.facebook.com/" class="socials__link">
+                  Facebook
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://twitter.com/" class="socials__link">
+                  Twitter
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://www.instagram.com/" class="socials__link">
+                  Instagram
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://www.youtube.com/" class="socials__link">
+                  YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__column">
+          <nav class="footer__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__link--active" href="index.html">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./map.html">Map</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./zoos.html">Zoos</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__column">
+          <form class='footer__subscribe subscribe' action="">
+            <h4 class="subscribe__title">Subscribe to our news</h4>
+            <div class="subscribe__inner">
+              <input class="subscribe__email" type="email" name="" id="" placeholder="Enter your email" required>
+              <button class="subscribe__button button-submit" type="submit">Submit</button>
+            </div>
+          </form>
+          <a class="footer__designed" href="#">
+            <div class="footer__designed-text">
+              Author Ivanov Dmitry
+            </div>
+            <div class="footer__designed-text">
+              ©RSSchool & ©Yem Digital 2022
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
