@@ -1,6 +1,6 @@
 let animationEnabledPetsSlider = false;
-let animationEnabledTestimonailsSlider = false;
-let popupEnabledTestimonails = false;
+let animationEnabledTestimonialsSlider = false;
+let popupEnabledTestimonials = false;
 let numberOfCards = 6;
 
 //burger//
@@ -486,14 +486,14 @@ const sliderDot = function () {
     sliderDotsLabels.forEach((val, i) => {
       if (
         currentAnotherAmountInput ===
-        val.attributes.dataprice.nodeValue.slice(1)
+        val.attributes.dataPrice.nodeValue.slice(1)
       ) {
         sliderDotsInput[i].checked = true;
       } else {
         sliderDotsInput[i].checked = false;
       }
     });
-    hideRollerWhenSliderdotIsScaledDown();
+    hideRollerWhenSliderDotIsScaledDown();
   });
   sliderDot.addEventListener("click", (e) => {
     if (event.target.className === "slider-dot__label") {
@@ -503,7 +503,7 @@ const sliderDot = function () {
   });
 };
 
-const hideRollerWhenSliderdotIsScaledDown = function () {
+const hideRollerWhenSliderDotIsScaledDown = function () {
   const sliderDotsInput = document.querySelectorAll(".slider-dot__input");
   const sliderDotsLabel = document.querySelectorAll(".slider-dot__label");
   sliderDotsLabel.forEach((val, i) => {
@@ -512,14 +512,14 @@ const hideRollerWhenSliderdotIsScaledDown = function () {
   });
 };
 
-//testimonails slider//
+//testimonials slider//
 
-const getWidthReviewTestimonailsSlider = function () {
+const getWidthReviewTestimonialsSlider = function () {
   const item = document.querySelector(".slider-scroll__item");
   return window.getComputedStyle(item).width.slice(0, -2);
 };
 
-const getGapTestimonailsSlider = function () {
+const getGapTestimonialsSlider = function () {
   const slider = document.querySelector(".slider-scroll__list");
   return window.getComputedStyle(slider).gap.slice(0, -2);
 };
@@ -528,18 +528,18 @@ const changeInputTestimonialsSlider = function () {
   const slider = document.querySelector(".slider-scroll__list");
   const navigationScroll = document.querySelector(".slider-scroll__scroll");
 
-  let currentTestimonalsSlide = 0;
+  let currentTestimonialsSlide = 0;
 
   navigationScroll.addEventListener("input", function () {
-    currentTestimonalsSlide = navigationScroll.value;
+    currentTestimonialsSlide = navigationScroll.value;
     slider.style.transform = `translateX(${
-      (-getWidthReviewTestimonailsSlider() - getGapTestimonailsSlider()) *
-      currentTestimonalsSlide
+      (-getWidthReviewTestimonialsSlider() - getGapTestimonialsSlider()) *
+      currentTestimonialsSlide
     }px)`;
   });
 };
 
-const getTopTestimonailsSlider = function () {
+const getTopTestimonialsSlider = function () {
   const surface = document.querySelector(".slider-scroll__list");
   return Number(window.getComputedStyle(surface).top.slice(0, -2));
 };
@@ -586,16 +586,16 @@ const swipeTestimonialsSlider = function () {
             navigationScroll.value--;
 
             surface.style.transform = `translateX(${
-              (-getWidthReviewTestimonailsSlider() -
-                getGapTestimonailsSlider()) *
+              (-getWidthReviewTestimonialsSlider() -
+                getGapTestimonialsSlider()) *
               navigationScroll.value
             }px)`;
           } else {
             navigationScroll.value++;
 
             surface.style.transform = `translateX(${
-              (-getWidthReviewTestimonailsSlider() -
-                getGapTestimonailsSlider()) *
+              (-getWidthReviewTestimonialsSlider() -
+                getGapTestimonialsSlider()) *
               navigationScroll.value
             }px)`;
           }
@@ -603,10 +603,10 @@ const swipeTestimonialsSlider = function () {
       } else {
         if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
           if (distY > 0) {
-            if (getTopTestimonailsSlider() < 0) {
-              if (getTopTestimonailsSlider() + 3 * getNumberAbs(distY) < 0) {
+            if (getTopTestimonialsSlider() < 0) {
+              if (getTopTestimonialsSlider() + 3 * getNumberAbs(distY) < 0) {
                 surface.style.top = `${
-                  getTopTestimonailsSlider() + 3 * getNumberAbs(distY)
+                  getTopTestimonialsSlider() + 3 * getNumberAbs(distY)
                 }px`;
               } else {
                 surface.style.top = `0px`;
@@ -614,15 +614,15 @@ const swipeTestimonialsSlider = function () {
             }
           } else {
             if (
-              getTopTestimonailsSlider() >
+              getTopTestimonialsSlider() >
               `-${lengthCards * heightCard + gapSurface * (lengthCards - 1)}`
             ) {
               if (
-                Math.abs(getTopTestimonailsSlider() - 3 * getNumberAbs(distY)) <
+                Math.abs(getTopTestimonialsSlider() - 3 * getNumberAbs(distY)) <
                 (lengthCards - 3) * heightCard + gapSurface * (lengthCards - 4)
               ) {
                 surface.style.top = `${
-                  getTopTestimonailsSlider() - 3 * getNumberAbs(distY)
+                  getTopTestimonialsSlider() - 3 * getNumberAbs(distY)
                 }px`;
               } else {
                 surface.style.top = `-${
@@ -665,16 +665,16 @@ const swipeTestimonialsSlider = function () {
             navigationScroll.value--;
 
             surface.style.transform = `translateX(${
-              (-getWidthReviewTestimonailsSlider() -
-                getGapTestimonailsSlider()) *
+              (-getWidthReviewTestimonialsSlider() -
+                getGapTestimonialsSlider()) *
               navigationScroll.value
             }px)`;
           } else {
             navigationScroll.value++;
 
             surface.style.transform = `translateX(${
-              (-getWidthReviewTestimonailsSlider() -
-                getGapTestimonailsSlider()) *
+              (-getWidthReviewTestimonialsSlider() -
+                getGapTestimonialsSlider()) *
               navigationScroll.value
             }px)`;
           }
@@ -682,24 +682,24 @@ const swipeTestimonialsSlider = function () {
       } else {
         if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
           if (distY > 0) {
-            if (getTopTestimonailsSlider() + 3 * getNumberAbs(distY) < 0) {
+            if (getTopTestimonialsSlider() + 3 * getNumberAbs(distY) < 0) {
               surface.style.top = `${
-                getTopTestimonailsSlider() + 3 * getNumberAbs(distY)
+                getTopTestimonialsSlider() + 3 * getNumberAbs(distY)
               }px`;
             } else {
               surface.style.top = `0px`;
             }
           } else {
             if (
-              getTopTestimonailsSlider() >
+              getTopTestimonialsSlider() >
               `-${lengthCards * heightCard + gapSurface * (lengthCards - 1)}`
             ) {
               if (
-                Math.abs(getTopTestimonailsSlider() - 3 * getNumberAbs(distY)) <
+                Math.abs(getTopTestimonialsSlider() - 3 * getNumberAbs(distY)) <
                 (lengthCards - 3) * heightCard + gapSurface * (lengthCards - 4)
               ) {
                 surface.style.top = `${
-                  getTopTestimonailsSlider() - 3 * getNumberAbs(distY)
+                  getTopTestimonialsSlider() - 3 * getNumberAbs(distY)
                 }px`;
               } else {
                 surface.style.top = `-${
@@ -715,7 +715,7 @@ const swipeTestimonialsSlider = function () {
   });
 };
 
-//testimonails popup//
+//testimonials popup//
 
 const toggleClassForPopup = function () {
   const popup = document.querySelector(".popup");
@@ -749,13 +749,13 @@ const checkWindowWidth880px = function () {
   return document.documentElement.clientWidth <= "880";
 };
 
-const clickTestimonailPopup = function () {
-  const testimonails = document.querySelector(".slider-scroll__list");
+const clickTestimonialPopup = function () {
+  const testimonials = document.querySelector(".slider-scroll__list");
   if (checkWindowWidth880px())
-    testimonails.addEventListener("click", openTestimonailPopup);
+    testimonials.addEventListener("click", openTestimonialPopup);
 };
 
-const openTestimonailPopup = function (e) {
+const openTestimonialPopup = function (e) {
   const popup = document.querySelector(".popup__review");
   if (e.target.classList.contains("review")) {
     toggleClassForPopup();
@@ -774,7 +774,7 @@ const fixWhenChangingWindowLanding = function () {
   window.addEventListener("resize", function () {
     const navigationScroll = document.querySelector(".slider-scroll__scroll");
     const slider = document.querySelector(".slider-scroll__list");
-    const testimonails = document.querySelector(".slider-scroll__list");
+    const testimonials = document.querySelector(".slider-scroll__list");
     const leftSlide = document.querySelector(".slider__item--left");
     const rightSlide = document.querySelector(".slider__item--right");
 
@@ -790,10 +790,10 @@ const fixWhenChangingWindowLanding = function () {
     rightSlide.innerHTML = getUniqueSlide(numberOfCards);
 
     if (checkWindowWidth880px()) {
-      clickTestimonailPopup();
+      clickTestimonialPopup();
     } else {
-      testimonails.removeEventListener("click", openTestimonailPopup);
-      testimonails.style.top = 0;
+      testimonials.removeEventListener("click", openTestimonialPopup);
+      testimonials.style.top = 0;
     }
     fixStartPositionPetSlider();
     changeWidthAnimationPetSlider(createKeyframePetSlider());
@@ -879,7 +879,7 @@ async function getLatitudeLongitude(country) {
 
 function fixWhenChangingWindowDonate() {
   window.addEventListener("resize", function () {
-    hideRollerWhenSliderdotIsScaledDown();
+    hideRollerWhenSliderDotIsScaledDown();
     startValueSliderDot();
   });
 }
@@ -893,7 +893,7 @@ const landingPage = function () {
     fixStartPositionPetSlider();
     fixStartAnimationPetSlider();
 
-    clickTestimonailPopup();
+    clickTestimonialPopup();
     clickPopupClose();
 
     changeInputTestimonialsSlider();
