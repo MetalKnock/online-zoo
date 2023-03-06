@@ -65,14 +65,14 @@ const getDataAnimals = function () {
   return [
     {
       name: "giant pandas",
-      native: "Native to Southwest China",
+      native: "Native to China",
       type: "herbivores",
       img: "./images/pets/giant_Pandas.jpg",
       icon: "./images/pets/icons/panda.png",
     },
     {
       name: "eagles",
-      native: "Native to Los Angeles",
+      native: "Native to USA",
       type: "carnivores",
       img: "./images/pets/Eagles.jpg",
       icon: "./images/pets/icons/eagle.png",
@@ -114,14 +114,14 @@ const getDataAnimals = function () {
     },
     {
       name: "Alpaca",
-      native: "Native to Southern Peru",
+      native: "Native to Peru",
       type: "herbivores",
       img: "./images/pets/Alpaca.jpg",
       icon: "./images/pets/icons/alpaca.png",
     },
     {
       name: "Bear",
-      native: "Native to Alaska",
+      native: "Native to Brazil",
       type: "carnivores",
       img: "./images/pets/Bear.jpg",
       icon: "./images/pets/icons/bear.png",
@@ -135,7 +135,7 @@ const getDataAnimals = function () {
     },
     {
       name: "Crocodile",
-      native: "Native to Australia",
+      native: "Native to Indonesia",
       type: "carnivores",
       img: "./images/pets/Crocodile.jpg",
       icon: "./images/pets/icons/crocodile.png",
@@ -163,21 +163,21 @@ const getDataAnimals = function () {
     },
     {
       name: "Koala",
-      native: "Native to Queensland",
+      native: "Native to Australia",
       type: "herbivores",
       img: "./images/pets/Koala.jpg",
       icon: "./images/pets/icons/koala.png",
     },
     {
       name: "Lion",
-      native: "Native to Asia",
+      native: "Native to Tanzania",
       type: "carnivores",
       img: "./images/pets/Lion.jpg",
       icon: "./images/pets/icons/lion.png",
     },
     {
       name: "Monkey",
-      native: "Native to Brazil",
+      native: "Native to Malaysia",
       type: "herbivores",
       img: "./images/pets/Monkey.jpg",
       icon: "./images/pets/icons/monkey.png",
@@ -191,7 +191,7 @@ const getDataAnimals = function () {
     },
     {
       name: "Red fox",
-      native: "Native to North America",
+      native: "Native to Poland",
       type: "carnivores",
       img: "./images/pets/Red_fox.jpg",
       icon: "./images/pets/icons/fox.png",
@@ -205,7 +205,7 @@ const getDataAnimals = function () {
     },
     {
       name: "Zebra",
-      native: "Native to Northern Kenya",
+      native: "Native to Kenya",
       type: "herbivores",
       img: "./images/pets/Zebra.jpg",
       icon: "./images/pets/icons/zebra.png",
@@ -807,7 +807,7 @@ const map = function () {
 
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
-      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 8,
     minZoom: 2,
   }).addTo(map);
@@ -867,13 +867,12 @@ const map = function () {
 };
 
 async function getLatitudeLongitude(country) {
-  const url = `http://api.positionstack.com/v1/forward?access_key=a68c59aab80f3a5bf3366583b6eeaf44&query=${country}`;
+  const url = `https://restcountries.com/v3.1/name/${country}`;
   const location = await fetch(url);
   const locationText = await location.json();
   const latitudeLongitude = [];
-  latitudeLongitude.push(locationText.data[0].latitude);
-  latitudeLongitude.push(locationText.data[0].longitude);
-
+  latitudeLongitude.push(locationText[0].latlng[0]);
+  latitudeLongitude.push(locationText[0].latlng[1]);
   return latitudeLongitude;
 }
 
